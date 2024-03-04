@@ -1,18 +1,31 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="display">
+    <Header/>
+    <FirstScreen class="push" />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Header from "@/components/Header.vue";
+import FirstScreen from "@/components/First-screen.vue";
 
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld
+    Header,
+    FirstScreen
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  .display {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .push {
+    flex-grow: 1;
+  }
+</style>
